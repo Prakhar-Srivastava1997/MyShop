@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Home Page</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">MyShop</div>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li><a [routerLink]='["/login"]' class="navbar-link">Login</a></li>
+                <li><a [routerLink]='["/signup"]' class="navbar-link">SignUp</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-navbar-btn" (click)="iconClick()">
+            <span class="material-symbols-outlined mobile-nav-icon" name="menu-icon">
+                menu
+                </span>
+            <span class="material-symbols-outlined mobile-nav-icon" name="close-icon">
+                close
+                </span>
+        </div>
+    </header>
+    <main class="main-section">
+        <div class="main-heading">Shop with us</div>
+    </main>
+    
+    <section class="about-us">
+        <h1 class="aboutus-heading">Who we are?</h1>
+        <div class="row">
+            <h5 class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </h5>
+
+            <img [src]="'./assets/images/groupimg.jpg'" alt="image" class="abotus-image"/>
+        </div>
+    </section>
+    <section class="contact">
+        <img [src]="'./assets/images/Ashoknagar.png'" alt="image" class="contactimage"/>
+        <div class="row">
+            <h1 class="contact-heading">Say Hi to us</h1>
+            <div class="address"><span class="material-symbols-outlined">home</span>100/200, Ashok Nagar, Kanpur-205012.</div>
+            <div class="email"><span class="material-symbols-outlined">mail</span>abc123@gmail.com</div>
+            <div class="phone"><span class="material-symbols-outlined">call</span>+91-1234567887</div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="row1">
+            <div class="copyright">All Rights Reserved @ ShopBridge</div>
+        </div>
+        <div class="row2">
+            <div class="footer-link"><a href="#" name="login">Login</a></div>
+            <div class="footer-link"><a [routerLink]='["/signup"]'>SignUp</a></div>
+        </div>
+    </footer>
+
+</body>
+</html>

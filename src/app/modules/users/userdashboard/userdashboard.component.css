@@ -1,0 +1,320 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:host{
+    --font-style:sans-serif
+}
+
+.container{
+    width: 100%;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.header-image{
+    width: 15%;
+    background: transparent;
+}
+
+.user-profile{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-head{
+    font-family: var(--font-style);
+    font-size: 2.5rem;
+    width: 35%;   
+}
+
+.profile-image{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    width: 5%;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.wallet-balance{
+    font-size: 1.2rem;
+}
+
+.icon{
+    font-size: 1.5rem;
+}
+
+.logout{
+    background-color: rgb(52, 47, 47);
+    color: whitesmoke;
+    /* height: 2rem; */
+    padding: .5rem .5rem;
+    border-radius: 5px;
+}
+
+.testimonial{
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(220, 212, 212);
+}
+
+.testimonial-head{
+    font-size: 2rem;
+    font-family: var(--font-style);
+    text-align: center;
+}
+
+.testimonial-array{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.testimonial-array-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px 2px grey;
+    margin-left: .5rem;
+    height: 20rem;
+    position: relative;
+}
+
+.testimonial-image{
+    border-radius: 100%;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top:2%;
+}
+
+.testimonial-name{
+    font-family: var(--font-style);
+    font-size: 1rem;
+    position: absolute;
+    top:35%;
+}
+
+.testimonial-data{
+    font-family: var(--font-style);
+    font-size: 0.8rem;
+    position: absolute;
+    top:42%;
+    text-align: center;
+}
+
+.fashion-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.fashion-heading{
+    font-family: var(--font-style);
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.container-flex{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.flex-item{
+    height: 30rem;
+    width:25%;
+    box-shadow: 1px 1px 1px 1px grey;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.image{
+    width: 100%;
+    height: 15rem;
+    position: absolute;
+}
+
+.flex-para{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:52%;
+    font-family: var(--font-style);
+    font-size: 0.9rem;
+    left: .5rem;
+}
+
+.cart-btn{
+    width: 50%;
+    font-size: 1rem;
+    background-color: rgb(120, 120, 243);
+    border-radius: 10px;
+    border: none;
+    padding: .5rem .5rem;
+    position: absolute;
+    top:180%;
+    left: 20%;
+}
+
+.page-control-C{
+    font-size: 1rem;
+}
+
+.page-control-F{
+    font-size: 1rem;
+}
+
+.footware-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footware-heading{
+    font-family: var(--font-style);
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+/* -------------------------------------------------------------------
+Responsive Code
+------------------------------------------------------------------- */
+
+@media screen and (max-width:670px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .testimonial{
+        width: 100%;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testimonial-head{
+        font-size: 2rem;
+        font-family: var(--font-style);
+        text-align: center;
+    }
+
+    .testimonial-array{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 5rem;
+    }
+
+    .testimonial-array-item{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 2px 2px 2px grey;
+        margin-left: .5rem;
+        height: 20rem;
+        position: relative;
+    }
+
+    .container-flex{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-evenly;
+        /* margin-left: 10%; */
+    }
+
+    .flex-item{
+        height: 30rem;
+        width:100%;
+        box-shadow: 1px 1px 1px 1px grey;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .page-control{
+        font-size: .7rem;
+        text-align:left;
+    }
+
+    .main-head{
+        font-family: var(--font-style);
+        font-size: 1.5rem;
+    }
+
+    .profile-image{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+    }
+
+    .details{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wallet-balance{
+        font-size: 0.7rem;
+    }
+    
+    .icon{
+        font-size: 1rem;
+    }
+    
+    .logout{
+        background-color: rgb(52, 47, 47);
+        color: whitesmoke;
+        height: 1rem;
+        padding: .1rem .1rem;
+        border-radius: 5px;
+        font-size: 0.5rem;
+    }
+}

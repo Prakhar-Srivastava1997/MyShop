@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <p class="balance">
+          Total Balance -$ <strong>{{ currentBalance }}</strong>
+        </p>
+        <div class="addmoney">
+          <input
+            type="number"
+            placeholder="Enter amount"
+            [(ngModel)]="enteredAmount"/>
+            <button type="submit" (click)="addMoney()" class="addMoneyBtn">
+              Add Money
+            </button>
+        </div>
+        <h1 class="grandTotal">Grand Total:${{ grandTotal }}</h1>
+      </div>
+      <main class="main-section">
+        <h1 class="main-heading">View your Cart</h1>
+        <div class="flex-main">
+          <div class="flex-item" *ngFor="let res of prodArray">
+            <img [src]="res.cartItemImage" alt="image" class="image" />
+            <div class="flex-para">
+              <p>Product Name : {{ res.cartItemName }}</p>
+              <br />
+              <p>Product Category : {{ res.cartItemCategory }}</p>
+              <br />
+              <p>Product Price : ${{ res.cartItemPrice }}</p>
+              <br />
+
+              <div>
+                <button type="button" (click)="plus(res)">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+                <input type="text" value="{{ res.cartItemQuantity }}" />
+                <button type="button" (click)="minus(res)">
+                  <i class="fa fa-minus" aria-hidden="true"></i>
+                </button>
+              </div>
+              <br />
+              <p>
+                Sub Total : ${{
+                  +res.cartItemPrice * res.cartItemQuantity | number
+                }}
+              </p>
+              <br />
+              <button type="button" (click)="removeItem(res)" class="removeBtn">
+                Remove Item
+              </button>
+            </div>
+          </div>
+        </div><br>
+        <button type="button" (click)="payNow()" class="paymentBtn">Proceed to Pay-${{grandTotal}}</button><br>
+        <button type="button" class="viewOrderBtn" (click)="viewOrders()">
+          View Your Orders
+        </button>
+      </main>
+    </div>
+  </body>
+</html>

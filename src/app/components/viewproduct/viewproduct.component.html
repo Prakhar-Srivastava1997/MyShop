@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Products</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main-head-div">
+            <h1 class="main-head">Product Record</h1>
+            <input type="text" placeholder="Search by Category" [(ngModel)]="name" class="search" (change)="valueChanged()"><span><i class="fa fa-search search-icon" (click)="btnclick()"></i></span>
+        </div>
+        <div class="container-flex">
+            <div class="flex-item" *ngFor="let res of prodArray | paginate: {itemsPerPage: 3, currentPage: pageCount}">
+                <img [src]=res.product_image alt="image" class="image">
+                <div class="flex-para">
+                    <p class="name">Product Name : {{res.product_name}}</p>
+                    <p class="email">Product Category : {{res.product_category}}</p>
+                    <p class="contact">Product Decsription : {{res.product_description}}</p>
+                    <p class="gender">Product Price : {{res.product_price}}</p>
+                    <p class="address">Product Quantity: {{res.product_quantity}}</p>
+                </div>
+            </div>
+        </div>
+        <pagination-controls (pageChange)="pageCount=$event" class="page-control"></pagination-controls>
+    </div>
+</body>
+</html>

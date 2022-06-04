@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img [src]="'./assets/images/welcome.jpg'" alt="" class="header-image">
+            <div class="user-profile">
+                <h1 class="main-head">Welcome, <strong>{{user.username}}</strong></h1>
+                <img [src]=user.userimage alt="" class="profile-image">
+                <div class="details">
+                    <i class='fa fa-shopping-cart icon' (click)="cartClicked()">{{itemCount}}</i>
+                    <button type="button" class="logout" (click)="logout()">Sign-Out</button>
+                </div>
+            </div>
+        </header>
+        <div class="testimonial">
+            <h1 class="testimonial-head">Our Customers Feedback</h1>
+            <div class="testimonial-array">
+                <div class="testimonial-array-item">
+                    <img [src]="'./assets/images/man-1.jpg'" alt="image" class="testimonial-image">
+                    <p class="testimonial-name"><strong>Mat Clay</strong></p>
+                    <p class="testimonial-data">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="testimonial-array-item">
+                    <img [src]="'./assets/images/women-1.jpg'" alt="image" class="testimonial-image">
+                    <p class="testimonial-name"><strong>Lana Williams</strong></p>
+                    <p class="testimonial-data">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="testimonial-array-item">
+                    <img [src]="'./assets/images/man-2.jpg'" alt="image" class="testimonial-image">
+                    <p class="testimonial-name"><strong>Jamie Thomas</strong></p>
+                    <p class="testimonial-data">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+        <div class="fashion-section">
+            <h2 class="fashion-heading">Great deals on Men|Women Fashion | Upto 50% Off</h2>
+            <div class="container-flex">
+                <div class="flex-item" *ngFor="let res of clothes | paginate: {itemsPerPage: 3, currentPage: pageC, id: 'paginate-1'}">
+                    <img [src]=res.product_image alt="image" class="image">
+                    <div class="flex-para">
+                        <p class="name"><b>{{res.product_name}}</b></p>
+                        <p class="email">{{res.product_category}}</p>
+                        <p class="contact">{{res.product_description}}</p>
+                        <p class="gender">${{res.product_price}}</p>
+                        <button type="button" class="cart-btn" (click)="addToCart(res)">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <pagination-controls (pageChange)="pageC=$event" class="page-control-C" id="paginate-1"></pagination-controls>
+        </div>
+        <div class="footware-section">
+            <h2 class="footware-heading">Great deals on Men|Women Footwares | Upto 30% Off</h2>
+            <div class="container-flex">
+                <div class="flex-item" *ngFor="let res of footwares | paginate: {itemsPerPage: 3, currentPage: pageF, id: 'paginate-2'}">
+                    <img [src]=res.product_image alt="image" class="image">
+                    <div class="flex-para">
+                        <p class="name"><b>{{res.product_name}}</b></p>
+                        <p class="email">{{res.product_category}}</p>
+                        <p class="contact">{{res.product_description}}</p>
+                        <p class="gender">${{res.product_price}}</p>
+                        <button type="button" class="cart-btn" (click)="addToCart(res)">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <pagination-controls (pageChange)="pageF=$event" class="page-control-F" id="paginate-2"></pagination-controls>
+        </div>
+    </div>
+</body>
+</html>

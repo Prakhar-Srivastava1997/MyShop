@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product Page</title>
+</head>
+<body>
+    <div class="container">
+        <form [formGroup]="addProductForm" (ngSubmit)="submit(addProductForm)" class="main-form">
+            <h2 class="top-heading"><strong>Add Product Here !!</strong></h2>
+            <p class="top-para"><strong>We need below details to add product into inventory</strong></p>
+            <div class="row-1">
+                <div class="col-1">
+                    <div class="form-group">
+                        <label for="product_name" class="lab-1">Product Name</label><br>
+                        <input type="text" formControlName='product_name' placeholder="Enter Product Name"><br>
+                        <span *ngIf="addProductForm.controls['product_name'].hasError('required') && addProductForm.controls['product_name'].touched">
+                                    Kindly provide Product Name!
+                        </span>
+                        <span *ngIf="addProductForm.controls['product_name'].hasError('maxlength')">
+                                    Maximum 20 characters allowed!
+                        </span>
+                        <span *ngIf="addProductForm.controls['product_name'].hasError('minlength')">
+                            Maximum 5 characters allowed!
+                        </span>
+                        <span *ngIf="addProductForm.controls['product_name'].hasError('uniqueProductName')">
+                            Product name already exist!
+                        </span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label for="product_category" class="lab-1">Product Category</label><br>
+                        <input type="text" formControlName='product_category' placeholder="Enter Product category"><br>
+                        <span *ngIf="addProductForm.controls['product_category'].hasError('required') && addProductForm.controls['product_category'].touched">
+                                    Kindly provide Product Category!
+                        </span>
+                        <span *ngIf="addProductForm.controls['product_category'].hasError('maxlength')">
+                                    Maximum 20 characters allowed!
+                        </span>
+                        <span *ngIf="addProductForm.controls['product_category'].hasError('minlength')">
+                            Minimum 5 characters allowed!
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row-1">
+                <div class="col-1">
+                    <div class="form-group">
+                        <label for="product_price">Product Price ($)</label><br>
+                        <input type="text" formControlName='product_price' placeholder="Enter Product Price"><br>
+                        <span *ngIf="addProductForm.controls['product_price'].hasError('required') && addProductForm.controls['product_price'].touched">
+                                    Kindly provide Product Price!
+                        </span>
+                        <span *ngIf="addProductForm.controls['product_price'].hasError('maxlength')">
+                                    Maximum 10 characters allowed!
+                        </span>
+                        <span *ngIf="addProductForm.controls['product_price'].hasError('minlength')">
+                            Minimum 10 characters allowed!
+                        </span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label for="product_quantity">Product Quantity</label><br>
+                        <input type="number" formControlName='product_quantity' placeholder="Enter Product Quantity"><br>
+                        <span *ngIf="addProductForm.controls['product_quantity'].hasError('required') && addProductForm.controls['product_quantity'].touched">
+                                    Kindly provide Product Quantity!
+                        </span>
+                        <span *ngIf="addProductForm.controls['product_quantity'].hasError('maxlength')">
+                            Maximum 15 characters allowed!
+                        </span>
+                        <span *ngIf="addProductForm.controls['product_quantity'].hasError('minlength')">
+                            Minimum 8 characters allowed!
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row-1">
+                <div class="col-1">
+                    <div class="form-group">
+                        <label for="product_description">Product Description</label><br>
+                        <textarea formControlName="product_description" placeholder="Enter Product Description"></textarea><br>
+                        <span *ngIf="addProductForm.controls['product_description'].hasError('required') && addProductForm.controls['product_description'].touched">
+                                    Kindly provide Product Description!
+                        </span>
+                        <span *ngIf="addProductForm.controls['product_description'].hasError('maxlength')">
+                                    Maximum 50 characters allowed!
+                        </span>
+                        <span *ngIf="addProductForm.controls['product_description'].hasError('minlength')">
+                            Minimum 5 characters allowed!
+                        </span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label for="image">Upload Image</label><br>
+                        <input type="file" id="image" (change)="addImage($event)" required>
+                    </div>
+                </div>
+            </div>
+            
+            
+           <div class="form-group">
+            <button type="submit" [disabled]="!addProductForm.valid" class="submit-btn" >Add Product Now</button>
+           </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+{
+  "users": [
+    {
+      "username": "Prakhar",
+      "emailId": "prakhar@gmail.com",
+      "contact": "1234567898",
+      "password": "prakhar123",
+      "gender": "male",
+      "userimage": "./assets/images/man-profile1.jpg",
+      "address": "23/M/7\nDABAULI",
+      "city": "Delhi",
+      "state": "Delhi",
+      "pincode": "208022",
+      "id": 1
+    },
+    {
+      "username": "Pravin",
+      "emailId": "pravin@gmail.com",
+      "contact": "2324324324",
+      "password": "pravin123",
+      "gender": "male",
+      "userimage": "./assets/images/man-profile2.jpg",
+      "address": "106/141\nBHARAT PARK, GANDHI NAGAR",
+      "city": "Kanpur",
+      "state": "Uttar Pradesh",
+      "pincode": "208012",
+      "id": 2
+    },
+    {
+      "username": "Mark",
+      "emailId": "mark@gmail.com",
+      "contact": "2312312332",
+      "password": "mark123",
+      "gender": "male",
+      "userimage": "./assets/images/man-profile3.jpg",
+      "address": "House No-3, Kalpi Road",
+      "city": "Kanpur",
+      "state": "Uttar Pradesh",
+      "pincode": "234566",
+      "id": 3
+    },
+    {
+      "username": "Lewis",
+      "emailId": "lewis@gmail.com",
+      "contact": "4233333344",
+      "password": "lewis123",
+      "gender": "male",
+      "userimage": "./assets/images/man-profile4.jpg",
+      "address": "Flat No-7, Gopala Green Apartments.",
+      "city": "Kanpur",
+      "state": "Uttar Pradesh",
+      "pincode": "235665",
+      "id": 4
+    },
+    {
+      "username": "Maria",
+      "emailId": "maria@gmail.com",
+      "contact": "5644577783",
+      "password": "maria123",
+      "gender": "female",
+      "userimage": "./assets/images/woman-profile1.jpg",
+      "address": "104/210, Ram Parak, Gandhi Nagar",
+      "city": "Kanpur",
+      "state": "Uttar Pradesh",
+      "pincode": "247787",
+      "id": 5
+    }
+  ],
+  "product": [
+    {
+      "product_name": "Addidas Sports Shoes",
+      "product_category": "Footware",
+      "product_description": "Very good shoes with awesome quality and comfort.",
+      "product_price": "2000",
+      "product_quantity": 50,
+      "product_image": "./assets/images/addidas-man.jpg",
+      "id": 1
+    },
+    {
+      "product_name": "Reebok Sports Shoes",
+      "product_category": "Footware",
+      "product_description": "Very good shoes with awesome comfort.",
+      "product_price": "2500",
+      "product_quantity": 49,
+      "product_image": "./assets/images/reebok-man.jpg",
+      "id": 2
+    },
+    {
+      "product_name": "Men Formal Shoes",
+      "product_category": "Footware",
+      "product_description": "Very nice and branded shoes.",
+      "product_price": "1000",
+      "product_quantity": 50,
+      "product_image": "./assets/images/osco-man.jpg",
+      "id": 3
+    },
+    {
+      "product_name": "Addidas for women",
+      "product_category": "Footware",
+      "product_description": "Excellent comfort to wear.",
+      "product_price": "1800",
+      "product_quantity": 50,
+      "product_image": "./assets/images/addidas-woman.jpg",
+      "id": 4
+    },
+    {
+      "product_name": "Reebok for women",
+      "product_category": "Footware",
+      "product_description": "Very nice and branded product",
+      "product_price": "3000",
+      "product_quantity": 50,
+      "product_image": "./assets/images/reebok-woman.jpg",
+      "id": 5
+    },
+    {
+      "product_name": "Women-formal shoes",
+      "product_category": "Footware",
+      "product_description": "Very nice and branded product.",
+      "product_price": "1000",
+      "product_quantity": 50,
+      "product_image": "./assets/images/formalshoes-woman.jpg",
+      "id": 6
+    },
+    {
+      "product_name": "Traditional for men",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "2000",
+      "product_quantity": 49,
+      "product_image": "./assets/images/man-dress1.jpg",
+      "id": 7
+    },
+    {
+      "product_name": "Traditional Attire ",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "3000",
+      "product_quantity": 49,
+      "product_image": "./assets/images/man-dress2.jpg",
+      "id": 8
+    },
+    {
+      "product_name": "T-shirt for men ",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "1500",
+      "product_quantity": 50,
+      "product_image": "./assets/images/man-dress3.jpg",
+      "id": 9
+    },
+    {
+      "product_name": "Cool T-shirt ",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "1800",
+      "product_quantity": 50,
+      "product_image": "./assets/images/man-dress4.jpg",
+      "id": 10
+    },
+    {
+      "product_name": "Men formal shirt",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "3000",
+      "product_quantity": 50,
+      "product_image": "./assets/images/man-dress5.jpg",
+      "id": 11
+    },
+    {
+      "product_name": "Men formal ",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "2500",
+      "product_quantity": 50,
+      "product_image": "./assets/images/man-dress6.jpg",
+      "id": 12
+    },
+    {
+      "product_name": "Women-traditional",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "4000",
+      "product_quantity": 50,
+      "product_image": "./assets/images/woman-dress1.jpg",
+      "id": 13
+    },
+    {
+      "product_name": "Women-cool attire",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "2500",
+      "product_quantity": 50,
+      "product_image": "./assets/images/woman-dress2.jpg",
+      "id": 14
+    },
+    {
+      "product_name": "Western dress women",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "3000",
+      "product_quantity": 50,
+      "product_image": "./assets/images/woman-dress3.jpg",
+      "id": 15
+    },
+    {
+      "product_name": "Women fancy t-shirt",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "1000",
+      "product_quantity": 50,
+      "product_image": "./assets/images/woman-dress4.jpg",
+      "id": 16
+    },
+    {
+      "product_name": "Women shirt outfit",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "1500",
+      "product_quantity": 50,
+      "product_image": "./assets/images/woman-dress5.jpg",
+      "id": 17
+    },
+    {
+      "product_name": "Women formals",
+      "product_category": "Clothes",
+      "product_description": "Very good product.",
+      "product_price": "1800",
+      "product_quantity": 50,
+      "product_image": "./assets/images/woman-dress6.jpg",
+      "id": 18
+    }
+  ],
+  "wallet": [
+    {
+      "userName": "Mark",
+      "walletAmount": 12000,
+      "userid": "3",
+      "id": 1
+    },
+    {
+      "userName": "Prakhar",
+      "walletAmount": 7500,
+      "userid": "1",
+      "id": 2
+    }
+  ],
+  "order": [
+    {
+      "username": "Prakhar",
+      "totalquantity": 3,
+      "totalamount": 7500,
+      "orderdate": "6/4/2022, 6:05:50 PM",
+      "id": 1
+    }
+  ]
+}

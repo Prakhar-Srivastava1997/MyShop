@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+</head>
+<body>
+    <div class="container">
+        <form [formGroup]="signupForm" (ngSubmit)="submit(signupForm)" class="main-form">
+            <h2 class="top-heading"><strong>Sign Up Here !!</strong></h2>
+            <p class="top-para"><strong>We need below details to create your account</strong></p>
+            <div class="row-1">
+                <div class="col-1">
+                    <div class="form-group">
+                        <label for="username" class="lab-1">Username</label><br>
+                        <input type="text" formControlName='username' placeholder="Enter Username"><br>
+                        <span *ngIf="signupForm.controls['username'].hasError('required') && signupForm.controls['username'].touched">
+                                    Kindly provide user name!
+                        </span>
+                        <span *ngIf="signupForm.controls['username'].hasError('maxlength')">
+                                    Maximum 20 characters allowed!
+                        </span>
+                        <span *ngIf="signupForm.controls['username'].hasError('minlength')">
+                            Minimum 2 characters allowed!
+                        </span>
+                        <span *ngIf="signupForm.controls['username'].hasError('uniqueUserName')">
+                            User name already exist!
+                        </span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label for="emailid" class="lab-2">Email</label><br>
+                        <input type="text" formControlName='emailId' placeholder="Enter Email Id"><br>
+                        <span *ngIf="signupForm.controls['emailId'].hasError('required') && signupForm.controls['emailId'].touched">
+                                    Kindly provide emailId !
+                        </span>
+                        <span *ngIf="signupForm.controls['username'].hasError('email')">
+                                    Provide Valid Email Id !
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row-1">
+                <div class="col-1">
+                    <div class="form-group">
+                        <label for="contact">Contact #</label><br>
+                        <input type="text" formControlName='contact' placeholder="Enter Contact Number"><br>
+                        <span *ngIf="signupForm.controls['contact'].hasError('required') && signupForm.controls['contact'].touched">
+                                    Kindly provide conatct number!
+                        </span>
+                        <span *ngIf="signupForm.controls['contact'].hasError('maxlength')">
+                                    Maximum 10 characters allowed!
+                        </span>
+                        <span *ngIf="signupForm.controls['contact'].hasError('minlength')">
+                            Minimum 10 characters allowed!
+                        </span>
+                        <span *ngIf="signupForm.controls['contact'].hasError('pattern')">
+                            Enter only numbers!
+                        </span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label for="password">Password</label><br>
+                        <input type="password" formControlName='password' placeholder="Enter Password"><br>
+                        <span *ngIf="signupForm.controls['password'].hasError('required') && signupForm.controls['password'].touched">
+                                    Kindly provide password !
+                        </span>
+                        <span *ngIf="signupForm.controls['password'].hasError('maxlength')">
+                            Maximum 15 characters allowed!
+                        </span>
+                        <span *ngIf="signupForm.controls['password'].hasError('minlength')">
+                            Minimum 8 characters allowed!
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row-1">
+                <div class="col-1">
+                    <div class="form-group">
+                        <label for="address">Address</label><br>
+                        <textarea formControlName="address" placeholder="Enter address"></textarea>
+                        <span *ngIf="signupForm.controls['address'].hasError('required') && signupForm.controls['address'].touched">
+                                    Kindly provide your address!
+                        </span>
+                        <span *ngIf="signupForm.controls['address'].hasError('maxlength')">
+                                    Maximum 50 characters allowed!
+                        </span>
+                        <span *ngIf="signupForm.controls['address'].hasError('minlength')">
+                            Minimum 5 characters allowed!
+                        </span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label for="city">City</label><br>
+                        <select formControlName="city">
+                            <option>Delhi</option>
+                            <option>Kanpur</option>
+                            <option>Mumbai</option>
+                        </select><br>
+                        <span *ngIf="signupForm.controls['city'].hasError('required') && signupForm.controls['city'].touched">
+                            Kindly provide your city!
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row-1">
+                <div class="col-1">
+                    <div class="form-group">
+                        <label for="state">State</label><br>
+                        <select formControlName="state" class="state">
+                            <option>Delhi</option>
+                            <option>Maharashtra</option>
+                            <option>Uttar Pradesh</option>
+                        </select><br>
+                        <span *ngIf="signupForm.controls['state'].hasError('required') && signupForm.controls['state'].touched">
+                            Kindly provide your state!
+                        </span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label for="image">Upload Image</label><br>
+                        <input type="file" id="image" (change)="addImage($event)" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row-1">
+                <div class="col-1">
+                    <div class="form-group">
+                        <label for="pincode">PinCode</label><br>
+                        <input type="text" formControlName='pincode' placeholder="Enter Pincode"><br>
+                        <span *ngIf="signupForm.controls['pincode'].hasError('required') && signupForm.controls['pincode'].touched">
+                                    Kindly provide conatct number!
+                        </span>
+                        <span *ngIf="signupForm.controls['pincode'].hasError('maxlength')">
+                                    Maximum 6 characters allowed!
+                        </span>
+                        <span *ngIf="signupForm.controls['pincode'].hasError('minlength')">
+                            Minimum 6 characters allowed!
+                        </span>
+                        <span *ngIf="signupForm.controls['pincode'].hasError('pattern')">
+                            Enter only numbers!
+                        </span>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <label class="radlabel">Male</label>
+                        <input type="radio" formControlName="gender" name="gender" value="male" id="maleradio">
+                        <label class="radlabel">Female</label>
+                        <input type="radio" formControlName="gender" name="gender" value="female" id="femaleradio">
+                    </div>
+                </div>
+            </div>
+           <div class="form-group">
+            <button type="submit" [disabled]="!signupForm.valid" class="submit-btn" >Register Now</button>
+           </div>
+        </form>
+    </div>
+</body>
+</html>

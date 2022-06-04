@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="order-head">Total Orders List</h1>
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>User Name</th>
+                    <th>Total Quantity</th>
+                    <th>Total Amount($)</th>
+                    <th>Order Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let res of orderArray; let i = index">
+                    <td data-label="S.No">{{i+1}}</td>
+                    <td data-label="User Name">{{res.username}}</td>
+                    <td data-label="Total Quantity">{{res.totalquantity}}</td>
+                    <td data-label="Total Amount($)">{{res.totalamount}}</td>
+                    <td data-label="Order Date">{{res.orderdate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

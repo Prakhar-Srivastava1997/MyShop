@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Users</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main-head-div">
+            <h1 class="main-head">Customer Record</h1>
+            <input type="text" placeholder="Search by Name" [(ngModel)]="name" class="search" (change)="valueChanged()"><span><i class="fa fa-search search-icon" (click)="btnclick()"></i></span>
+        </div>
+        <div class="container-flex" *ngIf="!isBtnClicked">
+            <div class="flex-item" *ngFor="let res of userArray | paginate: {itemsPerPage: 3, currentPage: pageCount}">
+                <img [src]=res.userimage alt="image" class="image">
+                <div class="flex-para">
+                    <p class="name">User Name : {{res.username}}</p>
+                    <p class="email">Email Id : {{res.emailId}}</p>
+                    <p class="contact">Contact : {{res.contact}}</p>
+                    <p class="gender">Gender : {{res.gender}}</p>
+                    <p class="address">Address : {{res.address}}</p>
+                    <p class="city">City : {{res.city}}</p>
+                    <p class="state">State : {{res.state}}</p>
+                    <p class="pincode">PinCode # : {{res.pincode}}</p>
+                </div>
+            </div>
+        </div>
+        <pagination-controls (pageChange)="pageCount=$event" class="page-control" *ngIf="!isBtnClicked"></pagination-controls>
+        <div *ngIf="isBtnClicked">
+            <div class="flex-item">
+                <img [src]=user.userimage alt="image" class="image">
+                <div class="flex-para">
+                    <p class="name">User Name : {{user.username}}</p>
+                    <p class="email">Email Id : {{user.emailId}}</p>
+                    <p class="contact">Contact : {{user.contact}}</p>
+                    <p class="gender">Gender : {{user.gender}}</p>
+                    <p class="address">Address : {{user.address}}</p>
+                    <p class="city">City : {{user.city}}</p>
+                    <p class="state">State : {{user.state}}</p>
+                    <p class="pincode">PinCode # : {{user.pincode}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
